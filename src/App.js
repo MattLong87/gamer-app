@@ -11,37 +11,21 @@ import Chat from './components/Chat';
 import EditProfile from './components/EditProfile';
 import './css/reset.css';
 import './css/styles.css';
+import faker from 'faker';
 
 function App() {
-  //placeholder profiles
-  let profileExamples = [
-    {
-      name: "Matt",
-      lastOnline: "2 hours",
-      distance: '0.6 mi',
-      photo: 'matt.jpg'
-    },
-    {
-      name: "Steven",
-      lastOnline: "6 hours",
-      distance: '4.2 mi',
-      photo: 'steven.jpg'
-    },
-    {
-      name: "Jonathan",
-      lastOnline: "2 days",
-      distance: '.5 mi',
-      photo: 'jon.jpg'
-    }
-  ];
 
   //array containing profiles (will be in redux state in future)
   let profiles = []
 
   //randomly picks from placeholder profiles to fill the profiles array
   for (let i=0; i < 40; i++){
-    let randomNumber = Math.floor(Math.random() * profileExamples.length);
-    profiles.push(profileExamples[randomNumber]);
+    let fakeProfile = {};
+    fakeProfile.name = faker.name.firstName();
+    fakeProfile.lastOnline = Math.floor(Math.random() * 6 + 1) + ' days';
+    fakeProfile.distance = Math.floor(Math.random() * 15 + 1) +' mi';
+    fakeProfile.photo = faker.image.avatar();
+    profiles.push(fakeProfile);
   }
 
   return (

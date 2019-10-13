@@ -7,7 +7,7 @@ export default class ProfilePage extends React.Component {
         let profile = this.props.location.state.profile;
 
         return (
-            <div className="profilePage" style={{backgroundImage: 'url(/img/' + profile.photo + ')'}}>
+            <div className="profilePage" style={{backgroundImage: 'url(' + profile.photo + ')'}}>
                 <Link to="/">
                     <button className="back">Back</button>
                 </Link>
