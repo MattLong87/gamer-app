@@ -1,0 +1,10 @@
+.thumbnail{
+    background: #333;
+    color: white;
+    height: 33.33vw;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
