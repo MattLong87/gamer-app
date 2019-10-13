@@ -1,0 +1,14 @@
+.edit-profile{
+    height: 100vh;
+    background: #222;
+    color: white;
+}
+
+.edit-profile .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 40vh;
+    margin: auto;
+}

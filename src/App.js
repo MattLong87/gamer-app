@@ -7,6 +7,8 @@ import {
 } from "react-router-dom";
 import Grid from './components/Grid';
 import ProfilePage from './components/ProfilePage';
+import Chat from './components/Chat';
+import EditProfile from './components/EditProfile';
 import './css/reset.css';
 import './css/styles.css';
 
@@ -37,15 +39,17 @@ function App() {
   let profiles = []
 
   //randomly picks from placeholder profiles to fill the profiles array
-  for (let i=0; i < 99; i++){
+  for (let i=0; i < 40; i++){
     let randomNumber = Math.floor(Math.random() * profileExamples.length);
     profiles.push(profileExamples[randomNumber]);
   }
 
   return (
-    <Router>
+    <Router className="app">
       <Switch>
         <Route path="/profile" component={ProfilePage} />
+        <Route path="/chat" component={Chat} />
+        <Route path="/editProfile" component={EditProfile} />
         <Route path="/">
           <Grid profiles={profiles} />
         </Route>

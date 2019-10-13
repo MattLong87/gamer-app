@@ -14,6 +14,9 @@ export default class ProfilePage extends React.Component {
                 <span className="name">{profile.name}</span>
                 <span className="distance">{profile.distance}</span>
                 <span className="lastOnline">{profile.lastOnline}</span>
+                <Link to="/chat">
+                    <button className="chat-button">Chat</button>
+                </Link>
             </div>
         );
     }

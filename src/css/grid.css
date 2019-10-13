@@ -1,0 +1,11 @@
+.edit-profile-button{
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(255, 208, 0);
+    color: black;
+    border-radius: 30px;
+    padding: 20px 50px;
+    font-size: 18px;
+}
