@@ -1,16 +1,47 @@
 .profilePage{
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
-    font-size: 8vw;
+    font-size: 4.6vw;
     color: white;
     background-color: #222;
     background-size: cover;
     background-position: center center;
+    padding: 4px;
+    background-attachment: fixed;
+    line-height: 1.3;
 }
 
 .profilePage .name{
-    font-size: 20vw;
+    font-size: 14vw;
+    /* spacer that pushes profile contents down page */
+    margin-top: 80vh;
+    margin-bottom: 4px;
+}
+
+.profilePage label{
+    text-transform: uppercase;
+    font-size: 4vw;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.profilePage .distance{
+    font-size: 4vw;
+}
+
+.profilePage .last-online{
+    font-size: 4vw;
+    margin-bottom: 4px;
+}
+
+.profilePage .about-me{
+    margin-bottom: 14px;
+}
+
+.profilePage .favorite-games{
+    margin-bottom: 14px;
 }

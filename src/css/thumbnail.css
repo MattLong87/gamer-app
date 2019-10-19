@@ -16,8 +16,10 @@
 .thumbnail .name{
     font-size: 4.3vw;
     margin-bottom: 1px;
+    letter-spacing: .5px;
 }
 
 .thumbnail .distance{
     font-size: 3vw;
+    letter-spacing: .5px;
 }

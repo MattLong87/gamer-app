@@ -3,6 +3,11 @@
     font-family: Poppins, sans-serif !important;
 }
 
+body{
+    /* doesn't work in safari 😭 */
+    overscroll-behavior: none;
+}
+
 a{
     text-decoration: none;
 }
