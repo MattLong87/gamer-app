@@ -17,7 +17,7 @@ export class Grid extends React.Component {
     let thumbnails = [];
 
     if(this.props.data){
-      this.props.data.allPersons.forEach(profile => thumbnails.push(<Link to={{ pathname: "/profile", state: { profile: profile } }}><Thumbnail profile={profile} /></Link>));
+      this.props.data.allPersons.forEach(profile => thumbnails.push(<Link to={{ pathname: "/profile", state: { profile: profile } }} key={profile.id}><Thumbnail profile={profile} /></Link>));
     }
     
     return (

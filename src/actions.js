@@ -34,6 +34,9 @@ export const fetchData = () => dispatch => {
             distance,
             lastOnline,
             photo,
+            aboutMe,
+            favoriteGames,
+            wantToPlay,
             id
         }
     }

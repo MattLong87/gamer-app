@@ -7,5 +7,17 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-    background-size: cover;;
+    background-size: cover;
+    font-weight: 300 !important;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.85);
+    padding: 2px 3px;
+}
+
+.thumbnail .name{
+    font-size: 4.3vw;
+    margin-bottom: 1px;
+}
+
+.thumbnail .distance{
+    font-size: 3vw;
 }

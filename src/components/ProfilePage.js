@@ -14,6 +14,9 @@ export default class ProfilePage extends React.Component {
                 <span className="name">{profile.name}</span>
                 <span className="distance">{profile.distance}</span>
                 <span className="lastOnline">{profile.lastOnline}</span>
+                <span className="aboutMe">{profile.aboutMe}</span>
+                <span className="favoriteGames">{profile.favoriteGames}</span>
+                <span className="wantToPlay">{profile.wantToPlay}</span>
                 <Link to="/chat">
                     <button className="chat-button">Chat</button>
                 </Link>
