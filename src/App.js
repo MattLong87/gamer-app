@@ -11,7 +11,7 @@ import Chat from './components/Chat';
 import EditProfile from './components/EditProfile';
 import './css/reset.css';
 import './css/styles.css';
-import faker from 'faker';
+//import faker from 'faker';
 
 function App() {
 
@@ -19,14 +19,14 @@ function App() {
   let profiles = []
 
   //randomly picks from placeholder profiles to fill the profiles array
-  for (let i=0; i < 40; i++){
-    let fakeProfile = {};
-    fakeProfile.name = faker.name.firstName();
-    fakeProfile.lastOnline = Math.floor(Math.random() * 6 + 1) + ' days';
-    fakeProfile.distance = Math.floor(Math.random() * 15 + 1) +' mi';
-    fakeProfile.photo = faker.image.avatar();
-    profiles.push(fakeProfile);
-  }
+  // for (let i=0; i < 40; i++){
+  //   let fakeProfile = {};
+  //   fakeProfile.name = faker.name.firstName();
+  //   fakeProfile.lastOnline = Math.floor(Math.random() * 6 + 1) + ' days';
+  //   fakeProfile.distance = Math.floor(Math.random() * 15 + 1) +' mi';
+  //   fakeProfile.photo = faker.image.avatar();
+  //   profiles.push(fakeProfile);
+  // }
 
   return (
     <Router className="app">

@@ -1,10 +1,10 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
 import Thumbnail from './Thumbnail';
 import '../css/grid.css';
 
-import {fetchData} from '../actions';
+import { fetchData } from '../actions';
 
 export class Grid extends React.Component {
 
@@ -16,8 +16,10 @@ export class Grid extends React.Component {
 
     let thumbnails = [];
 
-    this.props.profiles.forEach(profile => thumbnails.push(<Link to={{ pathname: "/profile", state: { profile: profile } }}><Thumbnail profile={profile} /></Link>));
-
+    if(this.props.data){
+      this.props.data.allPersons.forEach(profile => thumbnails.push(<Link to={{ pathname: "/profile", state: { profile: profile } }}><Thumbnail profile={profile} /></Link>));
+    }
+    
     return (
       <div className="grid">
         {thumbnails}

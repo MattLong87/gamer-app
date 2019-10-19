@@ -1,4 +1,4 @@
-import {API_BASE_URL} from './config';
+import { API_BASE_URL } from './config';
 import { ApolloClient } from 'apollo-client';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { HttpLink } from 'apollo-link-http';
@@ -6,12 +6,12 @@ import gql from "graphql-tag";
 
 const cache = new InMemoryCache();
 const link = new HttpLink({
-  uri: API_BASE_URL + 'graphql'
+    uri: API_BASE_URL + 'graphql'
 });
 
 const client = new ApolloClient({
-  cache,
-  link
+    cache,
+    link
 });
 
 export const ADD_PROFILE = 'ADD_PROFILE';
@@ -27,17 +27,17 @@ export const fetchDataSuccess = data => ({
 
 export const fetchData = () => dispatch => {
     client
-    .query({
-      query: gql`
-        query GetLaunch {
-          launch(id: 56) {
+        .query({
+            query: gql`
+        query {allPersons {
+            name,
+            distance,
+            lastOnline,
+            photo,
             id
-            mission {
-              name
-            }
-          }
         }
+    }
       `
-    })
-    .then(result => console.log(result));
+        })
+        .then(data => dispatch(fetchDataSuccess(data)));
 };
